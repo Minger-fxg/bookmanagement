@@ -33,10 +33,10 @@ export default {
   },
   methods:{
     registerSystem(){
-      Axios.post('http://localhost:3000/register',{
+      Axios.get('http://localhost:3000/register',{
         params:this.newUser
       }).then(function(response){
-        alert(response.data)
+        alert(response.data.state+"\n"+response.data.message)
       })
     }
   }
